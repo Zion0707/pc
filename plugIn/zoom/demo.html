@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<link rel="stylesheet" href="zoom.css">
+</head>
+<body>
+
+<div data-src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1413694859,1956075064&fm=116&gp=0.jpg">点我试试</div>
+
+<script src="jquery.min.js"></script>
+<script src="util.js"></script>
+<script src="zoom.js"></script>
+<script>
+	//图片放大效果
+    $("body").on("click","[data-src]",function(){
+        var list=null,$list;
+        var $t = $(this);
+        if(list==null){
+            var id = 1;
+            list = [];
+            $list = $("[data-src]");
+            $list.each(function(){
+                var $t = $(this), 
+                    src = $t.attr("data-src") ,
+                    big = $t.attr("data-src") ,
+                    fname = $t.prop("title") ;
+                list.push({
+                    pick_code:id,
+                    file_id: id,
+                    min_pic:src,
+                    file_size: "",
+                    file_name: fname,
+                    ind: id-1,
+                    source: {
+                        all_url:[src,big],
+                        source_url:big,
+                        url:big
+                    }
+                });
+                id++;
+            })
+        }
+        VW.Screen.Open(list[$list.index($t)], list);
+        return false;
+    });
+</script>
+</body>
+</html>
