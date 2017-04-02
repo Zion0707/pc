@@ -809,7 +809,7 @@ var VW = window['VW'] || {};
                 '</div>'+
                 '<div class="pvc-box">'+
                 '<div class="pvc-photo-wrap">'+
-                '<img data-rel="load" src="/common/images/v2/previewer/loader.gif" style="position: absolute;left: 50%;top: 50%;margin: -32px 0 0 -32px;z-index: 2;display:none;">'+
+                '<img data-rel="load" src="images/loader.gif" style="position: absolute;left: 50%;top: 50%;margin: -32px 0 0 -32px;z-index: 2;display:none;">'+
                 '<img src="" alt="" style="background:#fff;" data-rel="pic" />'+
                 '</div>'+
                 '<div class="pvc-thumb" style="display:none;">'+
@@ -1562,7 +1562,7 @@ var VW = window['VW'] || {};
 
     VW.Initial = function(){
         //Load css
-        Util.Style.IncludeCss('js_viewer_css_' + _cssKey, '/invest/css/v2/zoom.css?v=' + (window['VIEWER_VERSION'] ? window['VIEWER_VERSION']  : '2.2'));
+        Util.Style.IncludeCss('js_viewer_css_' + _cssKey, 'css/zoom.css?v=' + (window['VIEWER_VERSION'] ? window['VIEWER_VERSION']  : '2.2'));
     }
     
     VW.Screen = {
