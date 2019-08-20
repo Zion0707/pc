@@ -1,2 +1,3 @@
-PC版模板
-如果要bootstrap兼容低版本浏览器，需要在本地服务器中运行
+# 兼容低版本PC版模板
+### 访问地址
+https://zion0707.github.io/pcTemplate/
